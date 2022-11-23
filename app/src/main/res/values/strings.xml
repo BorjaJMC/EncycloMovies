@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EncycloMovies</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_textField">Todos los campos tienen que estar cumplimentados</string>
+    <string name="error_password">Debe escribir un correo electrónico válido</string>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.LoginFragment"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_deflogo"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/red"
+        app:boxStrokeErrorColor="@color/red"
+        app:hintTextColor="@color/red"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailInLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:background="@color/gray"
+            android:textColor="@color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/red"
+        app:boxStrokeErrorColor="@color/red"
+        app:hintTextColor="@color/red"
+        android:textColorHint="@color/white"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:background="@color/gray"
+            android:textColor="@color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rememberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Has olvidado tu contraseña?"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textColor="@color/red"
+        android:gravity="end"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión"
+        android:textAllCaps="false"
+        android:layout_marginTop="15dp"
+        app:cornerRadius="50dp"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:textAllCaps="false"
+        android:layout_marginTop="145dp"
+        app:cornerRadius="50dp"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/mainMoviesFragment"
+        android:name="com.example.encyclomovies.views.mainmovies.MainMoviesFragment"
+        android:label="mainMoviesFragment"
+        tools:layout="@layout/fragment_main_movies" >
+        <action
+            android:id="@+id/action_mainMoviesFragment_to_detailMovieFragment"
+            app:destination="@id/detailMovieFragment2"
+            app:popUpTo="@id/mainMoviesFragment" />
+        <action
+            android:id="@+id/action_mainMoviesFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMovieFragment2"
+        android:name="com.example.encyclomovies.views.detailmovie.DetailMovieFragment"
+        android:label="fragment_detail_movie"
+        tools:layout="@layout/fragment_detail_movie" >
+        <action
+            android:id="@+id/action_detailMovieFragment2_to_detailMovieSecondFragment"
+            app:destination="@id/detailMovieSecondFragment"
+            app:popUpTo="@id/mainMoviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMovieSecondFragment"
+        android:name="com.example.encyclomovies.views.secondetailmovie.DetailMovieSecondFragment"
+        android:label="fragment_detail_movie_second"
+        tools:layout="@layout/fragment_detail_movie_second" >
+        <action
+            android:id="@+id/action_detailMovieSecondFragment_to_detailMovieFragment2"
+            app:destination="@id/detailMovieFragment2"
+            app:popUpTo="@id/mainMoviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.encyclomovies.views.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainMoviesFragment"
+            app:destination="@id/mainMoviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.encyclomovies.views.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainMoviesFragment"
+            app:destination="@id/mainMoviesFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_passwordResetFragment"
+            app:destination="@id/passwordResetFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.encyclomovies.views.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_mainMoviesFragment"
+            app:destination="@id/mainMoviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordResetFragment"
+        android:name="com.example.encyclomovies.views.PasswordResetFragment"
+        android:label="PasswordResetFragment" />
+</navigation>
